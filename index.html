@@ -93,6 +93,8 @@
       background: var(--tile); display: flex; align-items: center; justify-content: center;
     }
     .thumb img, .thumb video { width: 100%; height: 100%; object-fit: cover; }
+    .thumb.figure { background: #ffffff; border: 1px solid var(--rule); }
+    .thumb.figure img { object-fit: contain; }
     .thumb .label { color: var(--muted); font-size: 13px; text-align: center; padding: 8px; }
     .entry-body { flex: 1; min-width: 0; }
     .title { font-weight: 700; font-size: 16px; }
@@ -196,7 +198,7 @@
   <h2>Research</h2>
 
   <div class="entry">
-    <a class="thumb" href="images/diagrams/fdt-n.svg" title="Open full-size diagram"><img src="images/diagrams/fdt-n.svg" alt="Animated FDT-N architecture: footprint rows pooled, encoded causally and decoded into quantile forecasts"></a>
+    <a class="thumb" href="images/real/fdt-n-replay.mp4" title="Open full-size video"><video src="images/real/fdt-n-replay.mp4" poster="images/real/fdt-n-replay.jpg" autoplay muted loop playsinline aria-label="FDT-N replaying real BTCUSDT windows: forecast quantile band versus the realized outcome"></video></a>
     <div class="entry-body">
       <span class="title">FDT-N: Footprint Distribution Transformer</span>
       <div class="meta">Dhruv Sharma &middot; manuscript, 2026 &middot; arXiv submission pending endorsement</div>
@@ -210,7 +212,7 @@
   </div>
 
   <div class="entry">
-    <a class="thumb" href="images/diagrams/chmt-q.svg" title="Open full-size diagram"><img src="images/diagrams/chmt-q.svg" alt="Animated CHMT-Q architecture: bar, L1 and L2 encoders with quality gates feeding monotone quantile heads"></a>
+    <a class="thumb figure" href="images/real/chmt-q-forecast.png" title="Open full-size figure"><img src="images/real/chmt-q-forecast.png" alt="CHMT-Q forecast versus actual on the development-forward split, with q10 to q90 band"></a>
     <div class="entry-body">
       <span class="title">CHMT-Q: Causal Hierarchical Market Transformer with Quantiles</span>
       <div class="meta">Dhruv Sharma &middot; manuscript, 2026 &middot; arXiv submission pending endorsement</div>
@@ -225,7 +227,7 @@
   </div>
 
   <div class="entry">
-    <a class="thumb" href="images/diagrams/htt.svg" title="Open full-size diagram"><img src="images/diagrams/htt.svg" alt="Animated HTT pipeline: spec decoded into code, then compiled, tested and capability-checked"></a>
+    <a class="thumb figure" href="images/real/htt-architecture.png" title="Open full-size figure"><img src="images/real/htt-architecture.png" alt="HTT-1.5B computational graph from the paper"></a>
     <div class="entry-body">
       <span class="title">HTT: Hyperion Terminal Transformer</span>
       <div class="meta">Dhruv Sharma &middot; architecture paper, 2026</div>
@@ -278,7 +280,7 @@
   </div>
 
   <div class="entry">
-    <a class="thumb" href="images/diagrams/drone-vs-gunner.svg" title="Open full-size diagram"><img src="images/diagrams/drone-vs-gunner.svg" alt="Animated drone evading a turret gunner in self-play"></a>
+    <a class="thumb" href="images/real/drone-vs-gunner.mp4" title="Open full-size video"><video src="images/real/drone-vs-gunner.mp4" poster="images/real/drone-vs-gunner.jpg" autoplay muted loop playsinline aria-label="drone-vs-gunner simulation: the turret tracks and fires while the drone evades"></video></a>
     <div class="entry-body">
       <span class="title">drone-vs-gunner: adversarial self-play from pixels</span>
       <div class="meta">2026 &middot; PyTorch, Isaac Lab</div>
@@ -309,7 +311,7 @@
   </div>
 
   <div class="entry">
-    <a class="thumb" href="images/diagrams/outfit-matcher.svg" title="Open full-size diagram"><img src="images/diagrams/outfit-matcher.svg" alt="Animated Outfit Matcher: photo matched to nearest 3D render in embedding space"></a>
+    <a class="thumb figure" href="images/real/outfit-matcher-architecture.png" title="Open full-size figure"><img src="images/real/outfit-matcher-architecture.png" alt="Outfit Matcher encoder architecture from the white paper"></a>
     <div class="entry-body">
       <span class="title">Outfit Matcher: from-scratch ViT for photo-to-render retrieval</span>
       <div class="meta">2026 &middot; PyTorch, DDP</div>
