@@ -198,10 +198,11 @@
   <h2>Research</h2>
 
   <div class="entry">
-    <a class="thumb" href="images/real/fdt-n-replay.mp4" title="Open full-size video"><video src="images/real/fdt-n-replay.mp4" poster="images/real/fdt-n-replay.jpg" autoplay muted loop playsinline aria-label="FDT-N replaying real BTCUSDT windows: forecast quantile band versus the realized outcome"></video></a>
+    <a class="thumb figure" href="images/real/fdt-n-collage.png" title="Open full-size figure"><img src="images/real/fdt-n-collage.png" alt="FDT-N architecture, q50 error by horizon against persistence and ridge, and per-target coverage"></a>
     <div class="entry-body">
       <span class="title">FDT-N: Footprint Distribution Transformer</span>
       <div class="meta">Dhruv Sharma &middot; manuscript, 2026 &middot; arXiv submission pending endorsement</div>
+      <div class="entry-links"><a href="https://github.com/dhruuvsharma/DaxAlgo-Research/blob/main/fdt-n/doc/reports/fdt-n-volume-footprint-transformer-final-submission.pdf">paper</a> / <a href="https://github.com/dhruuvsharma/DaxAlgo-Research/tree/main/fdt-n">code</a> / <a href="https://github.com/dhruuvsharma/DaxAlgo-Research/tree/main/fdt-n/visualizer">visualizer</a></div>
       <p>
         A 372K-parameter ragged-set transformer over full order-flow footprint rows, trained with three
         seeds and selected on validation loss only. On held-out data it beat persistence by 7.25%
@@ -212,10 +213,11 @@
   </div>
 
   <div class="entry">
-    <a class="thumb figure" href="images/real/chmt-q-forecast.png" title="Open full-size figure"><img src="images/real/chmt-q-forecast.png" alt="CHMT-Q forecast versus actual on the development-forward split, with q10 to q90 band"></a>
+    <a class="thumb figure" href="images/real/chmt-q-collage.png" title="Open full-size figure"><img src="images/real/chmt-q-collage.png" alt="CHMT-Q architecture, forecast versus actual, and modality-gate means during training"></a>
     <div class="entry-body">
       <span class="title">CHMT-Q: Causal Hierarchical Market Transformer with Quantiles</span>
       <div class="meta">Dhruv Sharma &middot; manuscript, 2026 &middot; arXiv submission pending endorsement</div>
+      <div class="entry-links"><a href="https://github.com/dhruuvsharma/DaxAlgo-Research/blob/main/chmt-q/doc/publication/chmtq-arxiv-manuscript.pdf">paper</a> / <a href="https://github.com/dhruuvsharma/DaxAlgo-Research/blob/main/chmt-q/doc/publication/chmtq-transformer-architecture-paper.pdf">architecture paper</a> / <a href="https://github.com/dhruuvsharma/DaxAlgo-Research/tree/main/chmt-q">code</a></div>
       <p>
         A 2.1M-parameter transformer with separate bar, L1 and L2 order-book encoders, quality-aware
         fusion, and monotone q10/q50/q90 heads. I built a strict causal data contract: content-hashed
@@ -231,6 +233,7 @@
     <div class="entry-body">
       <span class="title">HTT: Hyperion Terminal Transformer</span>
       <div class="meta">Dhruv Sharma &middot; architecture paper, 2026</div>
+      <div class="entry-links"><a href="https://github.com/dhruuvsharma/Hyperion/blob/main/products/htt/research/hyperion-terminal-transformer-research-paper.pdf">paper</a> / <a href="https://github.com/dhruuvsharma/Hyperion/tree/main/products/htt">code</a></div>
       <p>
         Design of a 1.52B-parameter decoder-only model specialized for writing trading strategies and
         visualizers: RMSNorm, RoPE, SwiGLU, grouped-query attention, 8 global and 24 sliding-window
@@ -245,11 +248,11 @@
   <h2>Projects</h2>
 
   <div class="entry featured">
-    <div class="thumb"><img src="images/daxalgo.jpg" alt="DaxAlgo Terminal screenshot"></div>
+    <a class="thumb" href="images/real/daxalgo-loop.mp4" title="Open full-size video"><video src="images/real/daxalgo-loop.mp4" poster="images/real/daxalgo-loop.jpg" autoplay muted loop playsinline aria-label="DaxAlgo: one sentence per tool, from pattern search to backtests and 3D market views"></video></a>
     <div class="entry-body">
       <span class="title">DaxAlgo</span><span class="tag">Founder</span>
       <div class="meta">May 2026 &ndash; present &middot; team of 3 &middot; C# / .NET 9, C++, TypeScript</div>
-      <div class="entry-links"><a href="https://daxalgo.ai">website</a></div>
+      <div class="entry-links"><a href="https://daxalgo.ai">website</a> / <a href="https://github.com/dhruuvsharma/DaxAlgo-Terminal-Strategies">strategy pack</a> / <a href="https://github.com/dhruuvsharma/Hyperion">Hyperion</a></div>
       <p>An AI-native trading platform. I built the full stack myself:</p>
       <ul class="bullets">
         <li><strong>Desktop terminal:</strong> describe a strategy in plain English and watch it trade, in a capability-scoped sandbox where each strategy can only trade its own virtual book. A Linux and macOS version (Avalonia) is in progress.</li>
@@ -263,10 +266,11 @@
   </div>
 
   <div class="entry">
-    <div class="thumb"><span class="label">Multi-role<br>LLM coordinator</span></div>
+    <a class="thumb" href="images/real/hyperion.mp4" title="Open full-size video"><video src="images/real/hyperion.mp4" poster="images/real/hyperion.jpg" autoplay muted loop playsinline aria-label="Hyperion authoring a strategy: describe, plan and write code, then review before it joins the catalog"></video></a>
     <div class="entry-body">
       <span class="title">Hyperion: evidence-gated LLM coordinator</span>
       <div class="meta">2026 &middot; C# / .NET, Python</div>
+      <div class="entry-links"><a href="https://github.com/dhruuvsharma/Hyperion">code</a></div>
       <p>
         A five-role agent workflow (Planner, Evidence Analyst, Critic, Synthesizer, Risk Judge) with
         hash-chained state, budget controls and human approval. The offline model stack covers
@@ -280,7 +284,7 @@
   </div>
 
   <div class="entry">
-    <a class="thumb" href="images/real/drone-vs-gunner.mp4" title="Open full-size video"><video src="images/real/drone-vs-gunner.mp4" poster="images/real/drone-vs-gunner.jpg" autoplay muted loop playsinline aria-label="drone-vs-gunner simulation: the turret tracks and fires while the drone evades"></video></a>
+    <a class="thumb" href="images/real/drone-terrains.mp4" title="Open full-size video"><video src="images/real/drone-terrains.mp4" poster="images/real/drone-terrains.jpg" autoplay muted loop playsinline aria-label="Trained drone and gunner policies rendered in desert, forest, snow and urban environments"></video></a>
     <div class="entry-body">
       <span class="title">drone-vs-gunner: adversarial self-play from pixels</span>
       <div class="meta">2026 &middot; PyTorch, Isaac Lab</div>
@@ -327,10 +331,11 @@
   </div>
 
   <div class="entry">
-    <div class="thumb"><span class="label">Order-flow &amp;<br>regime models</span></div>
+    <a class="thumb" href="images/real/sigmaicflow.mp4" title="Open full-size video"><video src="images/real/sigmaicflow.mp4" poster="images/real/sigmaicflow.jpg" autoplay muted loop playsinline aria-label="SigmaIcFlow live: signal matrix, per-signal detail, IC weights and the model card"></video></a>
     <div class="entry-body">
       <span class="title">Market microstructure strategies</span>
       <div class="meta">2026 &middot; C# / .NET</div>
+      <div class="entry-links"><a href="https://github.com/dhruuvsharma/DaxAlgo-Terminal-Strategies">code</a></div>
       <p>
         Nine strategies built on the DaxAlgo SDK. <em>SigmaIcFlow</em> fuses order-flow signals with
         Ledoit&ndash;Wolf shrunk covariance, &Sigma;<sup>&minus;1</sup>&middot;IC weights, isotonic calibration
