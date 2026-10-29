@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dhruv Sharma - CV</title>
+<style>
+  @page { size: A4; margin: 15mm 16mm; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; color: #111; background: #fff;
+    font-family: "Charter", "Georgia", "Times New Roman", serif;
+    font-size: 10.3pt; line-height: 1.38;
+  }
+  a { color: #1a4f9c; text-decoration: none; }
+  header { text-align: center; margin-bottom: 10px; }
+  h1 { font-size: 21pt; font-weight: 400; letter-spacing: 0.5px; margin: 0 0 3px; }
+  .contact { font-size: 9.6pt; color: #333; }
+  .contact .sep { margin: 0 6px; color: #999; }
+  h2 {
+    font-size: 11pt; font-variant: small-caps; letter-spacing: 0.8px;
+    border-bottom: 0.8px solid #444; margin: 13px 0 6px; padding-bottom: 1px;
+  }
+  .item { margin-bottom: 7px; break-inside: avoid; }
+  .line { display: flex; justify-content: space-between; gap: 12px; }
+  .line .r { white-space: nowrap; color: #333; }
+  .sub { font-style: italic; color: #333; }
+  ul { margin: 2px 0 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+  p { margin: 0; }
+  .skills td { padding: 1px 10px 1px 0; vertical-align: top; }
+  .skills td:first-child { font-weight: 700; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Dhruv Sharma</h1>
+  <div class="contact">
+    Bengaluru, India<span class="sep">|</span>
+    <a href="mailto:dhruvsha.info@gmail.com">dhruvsha.info@gmail.com</a><span class="sep">|</span>
+    <a href="https://dhruuvsharma.github.io">dhruuvsharma.github.io</a><span class="sep">|</span>
+    <a href="https://github.com/dhruuvsharma">github.com/dhruuvsharma</a><span class="sep">|</span>
+    <a href="https://www.linkedin.com/in/dhruvsharmainfo">linkedin.com/in/dhruvsharmainfo</a>
+  </div>
+</header>
+
+<h2>Research Interests</h2>
+<p>Numeric transformers for continuous signals; LLM agents that write and verify code; reinforcement
+learning and sim-to-real transfer for robotics. Long-term goal: a "nervous system" of models for robots
+and drones, with numeric joint models predicting rotation and torque, vision models as eyes, and a
+supervising model that makes final decisions.</p>
+
+<h2>Education</h2>
+<div class="item">
+  <div class="line"><span><strong>MITx MicroMasters Program in Finance</strong>, Massachusetts Institute of Technology (online)</span><span class="r">Oct 2025 &ndash; Feb 2027 (expected)</span></div>
+  <p class="sub">Completed: Mathematical Methods for Quantitative Finance (Jan 2026); Derivatives Markets (May 2026)</p>
+</div>
+<div class="item">
+  <div class="line"><span><strong>Post Graduate Program in Algorithmic Trading</strong>, Indian Institute of Quantitative Finance</span><span class="r">Oct 2025 &ndash; Jun 2026</span></div>
+</div>
+<div class="item">
+  <div class="line"><span><strong>B.Tech, Computer Science &amp; Engineering</strong>, Rajasthan Technical University, Kota</span><span class="r">2020 &ndash; 2024</span></div>
+  <p class="sub">Worked full time in industry alongside the degree from 2022.</p>
+</div>
+
+<h2>Research</h2>
+<div class="item">
+  <div class="line"><span><strong>FDT-N: Footprint Distribution Transformer</strong> &mdash; D. Sharma</span><span class="r">Manuscript, 2026</span></div>
+  <ul>
+    <li>372K-parameter ragged-set transformer over full order-flow footprint rows; three seeds, model selection on validation loss only.</li>
+    <li>Held-out q50 MAE 7.25% better than persistence but 2.68% worse than a train-only ridge baseline (ridge won 55/56 horizon-target cells); reported as a negative result. arXiv submission pending endorsement.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span><strong>CHMT-Q: Causal Hierarchical Market Transformer with Quantiles</strong> &mdash; D. Sharma</span><span class="r">Manuscript, 2026</span></div>
+  <ul>
+    <li>2.1M-parameter transformer with separate bar / L1 / L2 encoders, quality-aware fusion and monotone q10/q50/q90 heads; content-hashed data, split-bound scalers, walk-forward with purge/embargo.</li>
+    <li>Weighted pinball loss +2.26% over an empirical baseline; directional and cost tests failed, so the model was documented as no-deploy. arXiv submission pending endorsement.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span><strong>HTT: Hyperion Terminal Transformer</strong> &mdash; D. Sharma</span><span class="r">Architecture paper, 2026</span></div>
+  <ul>
+    <li>Design of a 1.52B-parameter decoder-only model for strategy and visualizer code (RMSNorm, RoPE, SwiGLU, GQA, hybrid global/sliding-window attention, grammar-constrained decoding), evaluated by sealed functional correctness with an ablation and stop condition for every design choice.</li>
+  </ul>
+</div>
+
+<h2>Selected Projects</h2>
+<div class="item">
+  <div class="line"><span><strong>DaxAlgo</strong> &mdash; Founder &middot; team of 3 &middot; <a href="https://daxalgo.ai">daxalgo.ai</a></span><span class="r">May 2026 &ndash; present</span></div>
+  <ul>
+    <li>Built the entire AI-native trading platform alone: a .NET 9 desktop terminal (Linux/macOS port in progress), broker integrations (Interactive Brokers, cTrader, Alpaca), website and marketplace, and cloud-service infrastructure.</li>
+    <li><em>Hyperion</em> AI harness: natural-language specifications become strategy code gated by compile &rarr; tests &rarr; capability checks; a 20-task benchmark scores outputs against commercial reference products.</li>
+    <li>DAXQ: a custom compiler and native C++ VM that run users' strategy code without exposing its source; capability-scoped sandbox with a public SDK (v0.4) and a custom Roslyn analyzer.</li>
+    <li>Execution engine (OMS, risk engine) behind two independent live-trading safety gates; strategies can only trade their own virtual book.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span><strong>Hyperion: Evidence-Gated LLM Coordinator</strong></span><span class="r">2026</span></div>
+  <ul>
+    <li>Five-role agent workflow (Planner, Evidence Analyst, Critic, Synthesizer, Risk Judge) with hash-chained state and human approval; distillation/QLoRA training harnesses, contamination checks, sealed evaluation and an isolated C# compile-and-replay verifier. 553 .NET + 494 Python tests.</li>
+    <li>Designed a custom transformer architecture (inspired by Sakana AI's Fugu) and trained a model with it by distilling an open-weight model; improved version in progress, code release planned.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span><strong>drone-vs-gunner: Adversarial Self-Play from Pixels</strong> &middot; <a href="https://github.com/dhruuvsharma/drone-vs-gunner">code</a></span><span class="r">2026</span></div>
+  <ul>
+    <li>Camera-only quadcopter evader vs. turret gunner, trained in simulation for transfer to a real drone and a 720&deg; robotic arm; independent PPO with snapshot-pool self-play, PFSP, ELO, 5-stage curriculum and an asymmetric actor-critic. Full GPU training run in progress.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span><strong>Max Delta Systems</strong> &mdash; real-time airspace awareness, defense startup, Germany</span><span class="r">Sep 2026 &ndash; present</span></div>
+  <ul>
+    <li>Building vision models that detect objects in the sky and estimate their properties in real time; multi-camera &ldquo;pixel to voxel&rdquo; ray intersection to locate and track objects in 3D, fused with live ADS-B data.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span><strong>Outfit Matcher: From-Scratch ViT for Photo-to-Render Retrieval</strong></span><span class="r">2026</span></div>
+  <ul>
+    <li>ViT-S/16 trained from scratch (21.9M parameters) with SupCon + auxiliary CE, bf16 DDP on 2&times;RTX 5090, and domain randomization to close the render-to-photo gap; an earlier ResNet-18 version reached Recall@10 83.5% on DeepFashion In-Shop.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span><strong>Market Microstructure Strategies</strong> &mdash; SigmaIcFlow, IndexRegimeGraph and 7 others</span><span class="r">2026</span></div>
+  <ul>
+    <li>Order-flow signals fused with Ledoit&ndash;Wolf shrunk covariance, &Sigma;<sup>&minus;1</sup>&middot;IC weights, isotonic calibration and quarter-Kelly sizing; regime consensus over a stack of market-regime models.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span><strong>Jane Street Puzzles</strong> &mdash; solved all five monthly puzzles, Jun&ndash;Oct 2026 (named on leaderboards)</span><span class="r">2026</span></div>
+</div>
+<div class="item">
+  <div class="line"><span><strong>Other:</strong> RL from scratch (PPO/SAC/DQN in NumPy) &middot; deep learning for price prediction &middot; forex ML research &middot; Tick-BackTester (C++20, 3&ndash;6M ticks/s) &middot; QuantChess (perft-verified) &middot; Vision Trainer</span><span class="r"></span></div>
+</div>
+
+<h2>Professional Experience</h2>
+<div class="item">
+  <div class="line"><span><strong>Rockstar Games</strong> &mdash; C# Full Stack Developer | Associate Technical Artist, Bengaluru</span><span class="r">Oct 2023 &ndash; present</span></div>
+  <ul>
+    <li>Software for the RAGE engine used across studios; joined full time during the final year of the B.Tech.</li>
+    <li>Credited on <em>GTA V</em>, <em>GTA Online</em>, <em>Red Dead Redemption 2</em> and <em>Red Dead Online</em>.</li>
+  </ul>
+</div>
+<div class="item">
+  <div class="line"><span><strong>Kyrel</strong> (gaming startup) &mdash; C++ Tools Programmer | Unreal Developer, Noida</span><span class="r">Apr 2023 &ndash; Sep 2023</span></div>
+  <ul><li>Built the core game framework and all mechanics in Unreal Engine 5: movement, AI enemies, and multiplayer networking (EOS, PlayFab).</li></ul>
+</div>
+<div class="item">
+  <div class="line"><span><strong>Lakshya Digital</strong> &mdash; Python Programmer | Technical Artist, Gurugram</span><span class="r">Aug 2022 &ndash; Feb 2023</span></div>
+  <ul><li>Full-time offer during college; wrote game-engine tools and pipeline automation in Python.</li></ul>
+</div>
+
+<h2>Technical Skills</h2>
+<table class="skills">
+  <tr><td>ML / Research</td><td>PyTorch (CUDA, DDP), transformers, contrastive learning, RL (PPO, SAC, DQN), distillation/QLoRA, walk-forward and purge/embargo validation, ONNX, Isaac Lab</td></tr>
+  <tr><td>Languages</td><td>Python, C#/.NET 9, C++20, TypeScript, SQL</td></tr>
+  <tr><td>Systems</td><td>Compilers and VMs, Roslyn analyzers, sandboxed runtimes, Avalonia/WPF, FastAPI, ASP.NET Core, Cloudflare Workers, Docker</td></tr>
+</table>
+
+<h2>Volunteering</h2>
+<div class="item">
+  <div class="line"><span><strong>Volunteer</strong>, Ota Tokyo event, Bengaluru</span><span class="r">Jan 2026</span></div>
+  <ul><li>Guided Japanese guests and visitors around the event using self-taught Japanese.</li></ul>
+</div>
+
+<h2>Languages</h2>
+<p>English (fluent; English-medium education throughout) &middot; Japanese (self-taught; JLPT N5 exam, December 2026)</p>
+
+</body>
+</html>
