@@ -92,7 +92,10 @@
       flex: 0 0 180px; height: 120px; border-radius: 4px; overflow: hidden;
       background: var(--tile); display: flex; align-items: center; justify-content: center;
     }
-    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .thumb img, .thumb video { width: 100%; height: 100%; object-fit: cover; }
+    .demo { margin: 10px 0 2px; }
+    .demo video { display: block; width: 100%; height: auto; border-radius: 4px; border: 1px solid var(--rule); background: #000; }
+    .demo figcaption { color: var(--muted); font-size: 13px; margin-top: 6px; }
     .thumb .label { color: var(--muted); font-size: 13px; text-align: center; padding: 8px; }
     .entry-body { flex: 1; min-width: 0; }
     .title { font-weight: 700; font-size: 16px; }
@@ -293,7 +296,7 @@
   </div>
 
   <div class="entry">
-    <div class="thumb"><span class="label">Pixel-to-voxel<br>airspace tracking</span></div>
+    <div class="thumb"><video src="images/maxdelta/thumb.mp4" poster="images/maxdelta/thumb.jpg" autoplay muted loop playsinline aria-label="Multi-camera ray triangulation in the Max Delta simulator"></video></div>
     <div class="entry-body">
       <span class="title">Max Delta Systems: real-time airspace awareness</span><span class="tag">Defense startup, Germany</span>
       <div class="meta">Sep 2026 &ndash; present &middot; Python, OpenCV, FastAPI</div>
@@ -303,6 +306,12 @@
         and track objects in 3D (&ldquo;pixel to voxel&rdquo;), with per-object speed, altitude and heading,
         and fuses this with live ADS-B aircraft positions.
       </p>
+      <figure class="demo">
+        <video src="images/maxdelta/collage.mp4" poster="images/maxdelta/collage-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <figcaption>Synthetic multi-camera simulation: per-camera motion masks become rays, rays are
+        triangulated into 3D tracks with heading, speed and altitude, and the scene is viewed top-down and
+        at ground level.</figcaption>
+      </figure>
     </div>
   </div>
 
