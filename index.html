@@ -93,9 +93,6 @@
       background: var(--tile); display: flex; align-items: center; justify-content: center;
     }
     .thumb img, .thumb video { width: 100%; height: 100%; object-fit: cover; }
-    .demo { margin: 10px 0 2px; }
-    .demo video { display: block; width: 100%; height: auto; border-radius: 4px; border: 1px solid var(--rule); background: #000; }
-    .demo figcaption { color: var(--muted); font-size: 13px; margin-top: 6px; }
     .thumb .label { color: var(--muted); font-size: 13px; text-align: center; padding: 8px; }
     .entry-body { flex: 1; min-width: 0; }
     .title { font-weight: 700; font-size: 16px; }
@@ -255,7 +252,8 @@
         <li><strong>Desktop terminal:</strong> describe a strategy in plain English and watch it trade, in a capability-scoped sandbox where each strategy can only trade its own virtual book. A Linux and macOS version (Avalonia) is in progress.</li>
         <li><strong>Hyperion AI harness:</strong> generated code must pass a verification ladder (compile, tests, capability checks) before it can run. A 20-task benchmark scores the output against commercial products.</li>
         <li><strong>DAXQ compiler and VM:</strong> a custom compiler and native C++ virtual machine so that users' strategy code runs without exposing its source.</li>
-        <li><strong>Execution engine:</strong> an OMS and risk engine with Interactive Brokers, cTrader and Alpaca integrations, behind two independent live-trading safety gates.</li>
+        <li><strong>Execution engine:</strong> an OMS and risk engine with Interactive Brokers, NinjaTrader, cTrader and Alpaca behind one broker interface, plus two independent live-trading safety gates.</li>
+        <li><strong>Research tooling:</strong> a tick-level backtest engine shared with live trading, a C++20 backtester for 50M+ tick workloads, and a headless CLI for parameter sweeps, walk-forward tests, Monte Carlo bootstrap (10,000 runs) and transaction-cost analysis.</li>
         <li><strong>Website and marketplace:</strong> signed strategy packages delivered to the terminal, plus the infrastructure for a future cloud-service business model.</li>
       </ul>
     </div>
@@ -296,7 +294,7 @@
   </div>
 
   <div class="entry">
-    <div class="thumb"><video src="images/maxdelta/thumb.mp4" poster="images/maxdelta/thumb.jpg" autoplay muted loop playsinline aria-label="Multi-camera ray triangulation in the Max Delta simulator"></video></div>
+    <a class="thumb" href="images/maxdelta/collage.mp4" title="Open full-size video"><video src="images/maxdelta/collage.mp4" poster="images/maxdelta/collage-poster.jpg" autoplay muted loop playsinline aria-label="Max Delta multi-camera simulation: tracking, ray triangulation and 3D views"></video></a>
     <div class="entry-body">
       <span class="title">Max Delta Systems: real-time airspace awareness</span><span class="tag">Defense startup, Germany</span>
       <div class="meta">Sep 2026 &ndash; present &middot; Python, OpenCV, FastAPI</div>
@@ -306,12 +304,6 @@
         and track objects in 3D (&ldquo;pixel to voxel&rdquo;), with per-object speed, altitude and heading,
         and fuses this with live ADS-B aircraft positions.
       </p>
-      <figure class="demo">
-        <video src="images/maxdelta/collage.mp4" poster="images/maxdelta/collage-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
-        <figcaption>Synthetic multi-camera simulation: per-camera motion masks become rays, rays are
-        triangulated into 3D tracks with heading, speed and altitude, and the scene is viewed top-down and
-        at ground level.</figcaption>
-      </figure>
     </div>
   </div>
 
@@ -379,24 +371,41 @@
   <p class="row-desc">Built the product end to end. Now leading a team of three.</p>
 
   <div class="row"><div class="org"><span class="logo dark"><img src="images/logos/rockstar.svg" alt="Rockstar Games"></span><span><strong>Rockstar Games</strong>, C# Full Stack Developer | Associate Technical Artist</span></div><span class="when">Oct 2023 &ndash; present</span></div>
-  <p class="row-desc">Software for the RAGE engine, used across studios. Joined full time in my final year
-    of college. Credited on
+  <div class="row-desc">Production tools for the RAGE engine, used across Rockstar's studios. Joined full time in my
+    final year of college. Credited on
     <a href="https://www.rockstargames.com/gta-v/thankyou">GTA V and GTA Online</a> and
-    <a href="https://www.rockstargames.com/reddeadonline/thankyou">Red Dead Redemption 2 and Red Dead Online</a>.</p>
+    <a href="https://www.rockstargames.com/reddeadonline/thankyou">Red Dead Redemption 2 and Red Dead Online</a>.
+    <ul class="bullets">
+      <li>A C#/.NET (WPF) character and animal data platform used by 1,000+ artists across 8 studios, connecting the live engine API with Perforce.</li>
+      <li>An automated LOD pipeline (Python + Houdini) that generates optimized mesh levels on every Perforce submission, processing 7,000+ assets a month.</li>
+      <li>A mission and cutscene layout tool with a live map view and two-way engine communication, used daily by the game designers.</li>
+      <li>A Perforce merge automation tool with conflict detection, cutting average merge time from 15 to 3 minutes.</li>
+      <li>In progress: a CNN-based asset QA system that detects geometry clipping and mesh artifacts (92% test accuracy).</li>
+    </ul></div>
 
-  <div class="row"><div class="org"><span class="logo text">K</span><span><strong>Kyrel</strong> (gaming startup), C++ Tools Programmer | Unreal Developer</span></div><span class="when">Apr 2023 &ndash; Sep 2023</span></div>
-  <p class="row-desc">Built the core game framework and all game mechanics in Unreal Engine 5: movement, AI
-    enemies, and multiplayer networking with Epic Online Services and PlayFab.</p>
+  <div class="row"><div class="org"><span class="logo"><img src="images/logos/kyrel.png" alt="Kyrel"></span><span><strong>Kyrel</strong> (gaming startup), C++ Tools Programmer | Unreal Developer</span></div><span class="when">Apr 2023 &ndash; Sep 2023</span></div>
+  <div class="row-desc">Built a complete third-person shooter alone in Unreal Engine 5 and C++.
+    <ul class="bullets">
+      <li>All core systems: a movement state machine with 15+ animation states, hitbox-based combat and weapons, and 8 character abilities with cooldowns.</li>
+      <li>Multiplayer on Epic Online Services and PlayFab: matchmaking, lobbies, latency compensation and server-side validation.</li>
+      <li>60 FPS with 100+ networked entities using an octree, client-side prediction and server reconciliation; delta compression cut bandwidth by 40%.</li>
+      <li>A PostgreSQL player-economy database for stats, inventory and progression, with transactional safety and rollback.</li>
+    </ul></div>
 
   <div class="row"><div class="org"><span class="logo dark"><img src="images/logos/lakshya.png" alt="Lakshya Digital"></span><span><strong>Lakshya Digital</strong>, Python Programmer | Technical Artist</span></div><span class="when">Aug 2022 &ndash; Feb 2023</span></div>
-  <p class="row-desc">Full-time offer during college. Wrote game-engine tools and pipeline automation in Python.</p>
+  <div class="row-desc">Full-time offer during college.
+    <ul class="bullets">
+      <li>Automated the FIFA MatchDay asset pipeline in Python: 1,000+ player cards a day from live data, cutting a batch from 8 hours to 20 minutes.</li>
+      <li>Three studio-wide Blender plugins: topology QA with visual highlighting, a Maya-style input remapper, and GPU-accelerated UV packing (5 minutes to under 30 seconds).</li>
+      <li>A batch framework linking Blender, 3ds Max and Perforce (500+ assets a day), and a Python-to-MaxScript bridge for rigging automation.</li>
+    </ul></div>
 
   <!-- ============ EDUCATION ============ -->
   <h2>Education</h2>
 
   <div class="row"><div class="org"><span class="logo"><img src="images/logos/mit.svg" alt="MIT"></span><span><strong>MITx MicroMasters in Finance</strong>, Massachusetts Institute of Technology (online)</span></div><span class="when">2025 &ndash; 2027 (expected)</span></div>
   <div class="row"><div class="org"><span class="logo"><img src="images/logos/iiqf.svg" alt="IIQF"></span><span><strong>Post Graduate Program in Algorithmic Trading</strong>, Indian Institute of Quantitative Finance</span></div><span class="when">2025 &ndash; 2026</span></div>
-  <div class="row"><div class="org"><span class="logo text">RTU</span><span><strong>B.Tech, Computer Science &amp; Engineering</strong>, Rajasthan Technical University, Kota</span></div><span class="when">2020 &ndash; 2024</span></div>
+  <div class="row"><div class="org"><span class="logo"><img src="images/logos/rtu.png" alt="Rajasthan Technical University"></span><span><strong>Bachelor of Technology, Computer Science &amp; Engineering</strong>, Rajasthan Technical University, Kota</span></div><span class="when">2020 &ndash; 2024</span></div>
 
   <!-- ============ SERVICE ============ -->
   <h2>Volunteering</h2>

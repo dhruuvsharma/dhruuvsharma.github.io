@@ -59,7 +59,7 @@ supervising model that makes final decisions.</p>
   <div class="line"><span><strong>Post Graduate Program in Algorithmic Trading</strong>, Indian Institute of Quantitative Finance</span><span class="r">Oct 2025 &ndash; Jun 2026</span></div>
 </div>
 <div class="item">
-  <div class="line"><span><strong>B.Tech, Computer Science &amp; Engineering</strong>, Rajasthan Technical University, Kota</span><span class="r">2020 &ndash; 2024</span></div>
+  <div class="line"><span><strong>Bachelor of Technology, Computer Science &amp; Engineering</strong>, Rajasthan Technical University, Kota</span><span class="r">2020 &ndash; 2024</span></div>
   <p class="sub">Worked full time in industry alongside the degree from 2022.</p>
 </div>
 
@@ -92,7 +92,8 @@ supervising model that makes final decisions.</p>
     <li>Built the entire AI-native trading platform alone: a .NET 9 desktop terminal (Linux/macOS port in progress), broker integrations (Interactive Brokers, cTrader, Alpaca), website and marketplace, and cloud-service infrastructure.</li>
     <li><em>Hyperion</em> AI harness: natural-language specifications become strategy code gated by compile &rarr; tests &rarr; capability checks; a 20-task benchmark scores outputs against commercial reference products.</li>
     <li>DAXQ: a custom compiler and native C++ VM that run users' strategy code without exposing its source; capability-scoped sandbox with a public SDK (v0.4) and a custom Roslyn analyzer.</li>
-    <li>Execution engine (OMS, risk engine) behind two independent live-trading safety gates; strategies can only trade their own virtual book.</li>
+    <li>Execution engine (OMS, risk engine) over IBKR, NinjaTrader, cTrader and Alpaca behind one broker interface, with two independent live-trading safety gates; strategies can only trade their own virtual book.</li>
+    <li>Research tooling: tick-level backtester shared with live trading, C++20 engine for 50M+ tick workloads, CLI for sweeps, walk-forward, Monte Carlo bootstrap and TCA.</li>
   </ul>
 </div>
 <div class="item">
@@ -137,17 +138,25 @@ supervising model that makes final decisions.</p>
 <div class="item">
   <div class="line"><span><strong>Rockstar Games</strong> &mdash; C# Full Stack Developer | Associate Technical Artist, Bengaluru</span><span class="r">Oct 2023 &ndash; present</span></div>
   <ul>
-    <li>Software for the RAGE engine used across studios; joined full time during the final year of the B.Tech.</li>
-    <li>Credited on <em>GTA V</em>, <em>GTA Online</em>, <em>Red Dead Redemption 2</em> and <em>Red Dead Online</em>.</li>
+    <li>Production tools for the RAGE engine used across studios; joined full time during the final year of the degree. Credited on <em>GTA V</em>, <em>GTA Online</em>, <em>Red Dead Redemption 2</em> and <em>Red Dead Online</em>.</li>
+    <li>C#/.NET (WPF) character and animal data platform used by 1,000+ artists across 8 studios, integrating the live engine API with Perforce.</li>
+    <li>Automated LOD pipeline (Python + Houdini) generating optimized mesh levels on Perforce submission, 7,000+ assets a month; mission/cutscene layout tool with live map and two-way engine communication.</li>
+    <li>Perforce merge automation (merge time 15 &rarr; 3 min); in progress: CNN-based asset QA detecting clipping and mesh artifacts (92% test accuracy).</li>
   </ul>
 </div>
 <div class="item">
   <div class="line"><span><strong>Kyrel</strong> (gaming startup) &mdash; C++ Tools Programmer | Unreal Developer, Noida</span><span class="r">Apr 2023 &ndash; Sep 2023</span></div>
-  <ul><li>Built the core game framework and all mechanics in Unreal Engine 5: movement, AI enemies, and multiplayer networking (EOS, PlayFab).</li></ul>
+  <ul>
+    <li>Built a complete third-person shooter alone in UE5/C++: 15+ state movement machine, hitbox combat, weapons, 8 abilities.</li>
+    <li>Multiplayer on EOS and PlayFab (matchmaking, lobbies, latency compensation); 60 FPS with 100+ networked entities via octree, client prediction and server reconciliation; delta compression cut bandwidth 40%.</li>
+  </ul>
 </div>
 <div class="item">
   <div class="line"><span><strong>Lakshya Digital</strong> &mdash; Python Programmer | Technical Artist, Gurugram</span><span class="r">Aug 2022 &ndash; Feb 2023</span></div>
-  <ul><li>Full-time offer during college; wrote game-engine tools and pipeline automation in Python.</li></ul>
+  <ul>
+    <li>Full-time offer during college. Automated the FIFA MatchDay asset pipeline (1,000+ player cards a day; batch time 8 h &rarr; 20 min).</li>
+    <li>Three studio-wide Blender plugins (topology QA, input remapper, GPU UV packing 5 min &rarr; &lt;30 s); Blender/3ds Max/Perforce batch framework.</li>
+  </ul>
 </div>
 
 <h2>Technical Skills</h2>
