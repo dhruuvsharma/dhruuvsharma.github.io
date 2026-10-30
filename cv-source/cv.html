@@ -19,6 +19,7 @@
   h2 {
     font-size: 11pt; font-variant: small-caps; letter-spacing: 0.8px;
     border-bottom: 0.8px solid #444; margin: 13px 0 6px; padding-bottom: 1px;
+    break-after: avoid;
   }
   .item { margin-bottom: 7px; break-inside: avoid; }
   .line { display: flex; justify-content: space-between; gap: 12px; }
@@ -46,9 +47,9 @@
 
 <h2>Research Interests</h2>
 <p>Numeric transformers for continuous signals; LLM agents that write and verify code; reinforcement
-learning and sim-to-real transfer for robotics. Long-term goal: a "nervous system" of models for robots
-and drones, with numeric joint models predicting rotation and torque, vision models as eyes, and a
-supervising model that makes final decisions.</p>
+learning and sim-to-real transfer for robots and drones. Long-term goal: a "nervous system" of models for a
+robot, with numeric models at each joint predicting the rotation and torque it needs, vision models as its
+eyes, and a supervising "brain" model that makes the final decisions.</p>
 
 <h2>Education</h2>
 <div class="item">
@@ -59,27 +60,27 @@ supervising model that makes final decisions.</p>
   <div class="line"><span><strong>Post Graduate Program in Algorithmic Trading</strong>, Indian Institute of Quantitative Finance</span><span class="r">Oct 2025 &ndash; Jun 2026</span></div>
 </div>
 <div class="item">
-  <div class="line"><span><strong>Bachelor of Technology, Computer Science &amp; Engineering</strong>, Rajasthan Technical University, Kota</span><span class="r">2020 &ndash; 2024</span></div>
-  <p class="sub">Worked full time in industry alongside the degree from 2022.</p>
+  <div class="line"><span><strong>Bachelor of Technology, Computer Science &amp; Engineering</strong>, Arya Institute of Engineering, Technology &amp; Management, Jaipur (affiliated with Rajasthan Technical University, Kota)</span><span class="r">2020 &ndash; 2024</span></div>
+  <p class="sub">CGPA 7.82 / 10, First Division with Distinction; final-year project graded A++. English-medium instruction. Worked full time in industry alongside the degree from 2022.</p>
 </div>
 
 <h2>Research</h2>
 <div class="item">
-  <div class="line"><span><strong>FDT-N: Footprint Distribution Transformer</strong> &mdash; D. Sharma</span><span class="r">Manuscript, 2026</span></div>
+  <div class="line"><span><strong>FDT-N: Footprint Distribution Transformer</strong> &mdash; D. Sharma &middot; <a href="https://github.com/dhruuvsharma/DaxAlgo-Research/blob/main/fdt-n/doc/reports/fdt-n-volume-footprint-transformer-final-submission.pdf">paper</a> &middot; <a href="https://github.com/dhruuvsharma/DaxAlgo-Research/tree/main/fdt-n">code</a></span><span class="r">Manuscript, 2026</span></div>
   <ul>
     <li>372K-parameter ragged-set transformer over full order-flow footprint rows; three seeds, model selection on validation loss only.</li>
     <li>Held-out q50 MAE 7.25% better than persistence but 2.68% worse than a train-only ridge baseline (ridge won 55/56 horizon-target cells); reported as a negative result. arXiv submission pending endorsement.</li>
   </ul>
 </div>
 <div class="item">
-  <div class="line"><span><strong>CHMT-Q: Causal Hierarchical Market Transformer with Quantiles</strong> &mdash; D. Sharma</span><span class="r">Manuscript, 2026</span></div>
+  <div class="line"><span><strong>CHMT-Q: Causal Hierarchical Market Transformer with Quantiles</strong> &mdash; D. Sharma &middot; <a href="https://github.com/dhruuvsharma/DaxAlgo-Research/blob/main/chmt-q/doc/publication/chmtq-arxiv-manuscript.pdf">paper</a> &middot; <a href="https://github.com/dhruuvsharma/DaxAlgo-Research/tree/main/chmt-q">code</a></span><span class="r">Manuscript, 2026</span></div>
   <ul>
     <li>2.1M-parameter transformer with separate bar / L1 / L2 encoders, quality-aware fusion and monotone q10/q50/q90 heads; content-hashed data, split-bound scalers, walk-forward with purge/embargo.</li>
     <li>Weighted pinball loss +2.26% over an empirical baseline; directional and cost tests failed, so the model was documented as no-deploy. arXiv submission pending endorsement.</li>
   </ul>
 </div>
 <div class="item">
-  <div class="line"><span><strong>HTT: Hyperion Terminal Transformer</strong> &mdash; D. Sharma</span><span class="r">Architecture paper, 2026</span></div>
+  <div class="line"><span><strong>HTT: Hyperion Terminal Transformer</strong> &mdash; D. Sharma &middot; <a href="https://github.com/dhruuvsharma/Hyperion/blob/main/products/htt/research/hyperion-terminal-transformer-research-paper.pdf">paper</a></span><span class="r">Architecture paper, 2026</span></div>
   <ul>
     <li>Design of a 1.52B-parameter decoder-only model for strategy and visualizer code (RMSNorm, RoPE, SwiGLU, GQA, hybrid global/sliding-window attention, grammar-constrained decoding), evaluated by sealed functional correctness with an ablation and stop condition for every design choice.</li>
   </ul>
@@ -97,7 +98,7 @@ supervising model that makes final decisions.</p>
   </ul>
 </div>
 <div class="item">
-  <div class="line"><span><strong>Hyperion: Evidence-Gated LLM Coordinator</strong></span><span class="r">2026</span></div>
+  <div class="line"><span><strong>Hyperion: Evidence-Gated LLM Coordinator</strong> &middot; <a href="https://github.com/dhruuvsharma/Hyperion">code</a></span><span class="r">2026</span></div>
   <ul>
     <li>Five-role agent workflow (Planner, Evidence Analyst, Critic, Synthesizer, Risk Judge) with hash-chained state and human approval; distillation/QLoRA training harnesses, contamination checks, sealed evaluation and an isolated C# compile-and-replay verifier. 553 .NET + 494 Python tests.</li>
     <li>Designed a custom transformer architecture (inspired by Sakana AI's Fugu) and trained a model with it by distilling an open-weight model; improved version in progress, code release planned.</li>
@@ -106,7 +107,7 @@ supervising model that makes final decisions.</p>
 <div class="item">
   <div class="line"><span><strong>drone-vs-gunner: Adversarial Self-Play from Pixels</strong> &middot; <a href="https://github.com/dhruuvsharma/drone-vs-gunner">code</a></span><span class="r">2026</span></div>
   <ul>
-    <li>Camera-only quadcopter evader vs. turret gunner, trained in simulation for transfer to a real drone and a 720&deg; robotic arm; independent PPO with snapshot-pool self-play, PFSP, ELO, 5-stage curriculum and an asymmetric actor-critic. Full GPU training run in progress.</li>
+    <li>Camera-only quadcopter evader vs. turret gunner, trained in simulation for transfer to a real drone and a 720&deg; robotic arm; independent PPO with snapshot-pool self-play, PFSP, ELO, 5-stage curriculum and an asymmetric actor-critic. Trained policies rendered in desert, forest, snow and urban scenes with a PyVista renderer. Full GPU training run in progress.</li>
   </ul>
 </div>
 <div class="item">
@@ -122,7 +123,7 @@ supervising model that makes final decisions.</p>
   </ul>
 </div>
 <div class="item">
-  <div class="line"><span><strong>Market Microstructure Strategies</strong> &mdash; SigmaIcFlow, IndexRegimeGraph and 7 others</span><span class="r">2026</span></div>
+  <div class="line"><span><strong>Market Microstructure Strategies</strong> &mdash; SigmaIcFlow, IndexRegimeGraph and 7 others &middot; <a href="https://github.com/dhruuvsharma/DaxAlgo-Terminal-Strategies">code</a></span><span class="r">2026</span></div>
   <ul>
     <li>Order-flow signals fused with Ledoit&ndash;Wolf shrunk covariance, &Sigma;<sup>&minus;1</sup>&middot;IC weights, isotonic calibration and quarter-Kelly sizing; regime consensus over a stack of market-regime models.</li>
   </ul>
@@ -160,7 +161,7 @@ supervising model that makes final decisions.</p>
 
 <h2>Technical Skills</h2>
 <table class="skills">
-  <tr><td>ML / Research</td><td>PyTorch (CUDA, DDP), transformers, contrastive learning, RL (PPO, SAC, DQN), distillation/QLoRA, walk-forward and purge/embargo validation, ONNX, Isaac Lab</td></tr>
+  <tr><td>ML / Research</td><td>PyTorch (CUDA, DDP), transformers, contrastive learning, RL (PPO, SAC, DQN), distillation/QLoRA, walk-forward and purge/embargo validation, ONNX, Isaac Lab, PyVista</td></tr>
   <tr><td>Languages</td><td>Python, C#/.NET 9, C++20, TypeScript, SQL</td></tr>
   <tr><td>Systems</td><td>Compilers and VMs, Roslyn analyzers, sandboxed runtimes, Avalonia/WPF, FastAPI, ASP.NET Core, Cloudflare Workers, Docker</td></tr>
 </table>
@@ -172,7 +173,7 @@ supervising model that makes final decisions.</p>
 </div>
 
 <h2>Languages</h2>
-<p>English (fluent; English-medium education throughout) &middot; Japanese (self-taught; JLPT N5 exam, December 2026)</p>
+<p>English (fluent; English-medium education from school through university, and English as the working language at Rockstar Games and DaxAlgo) &middot; Japanese (self-taught; JLPT N5 exam, December 2026)</p>
 
 </body>
 </html>
